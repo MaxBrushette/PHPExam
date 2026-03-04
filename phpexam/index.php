@@ -5,6 +5,7 @@
                 <h1>Event Registration</h1>
             </header>
             <section>
+                <!--This is just the initial table so you can enter in information to the database. Uses POST. -->
                 <form action="process.php" method="post">
                     <fieldset>
                         <legend>Registration Form</legend>

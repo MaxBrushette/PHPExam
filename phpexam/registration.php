@@ -1,7 +1,7 @@
 <?php
 require "includes/header.php";
 require "includes/connect.php";
-
+//The registration.php shows you all of the registers in the table ordered by when it was created.
 $sql = "SELECT * FROM event_registrations ORDER BY created_at DESC";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
@@ -10,6 +10,7 @@ $event_registrations = $stmt->fetchAll();
 
 <main class="mt-4">
     <h2>Registry Configuration</h2>
+    <!--Makes sure to let you know if no one has registered yet. -->
     <?php if(empty($event_registrations)): ?>
         <p>No people registered.</p>
     <?php else: ?>
@@ -24,6 +25,7 @@ $event_registrations = $stmt->fetchAll();
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- For each register, it produces a new row with the appropriate columns. -->
                     <?php foreach($event_registrations as $event_registration): ?>
                         <tr>
                             <td><?= htmlspecialchars($event_registration['registrationID']);?></td>

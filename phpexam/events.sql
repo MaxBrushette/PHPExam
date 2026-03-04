@@ -5,3 +5,4 @@ CREATE TABLE event_registrations(
     phone VARCHAR(20) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )
+/*This creates the event_registrations table */
