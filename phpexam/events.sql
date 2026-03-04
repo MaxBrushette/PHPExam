@@ -1,4 +1,4 @@
-CREATE TABLE event_registration(
+CREATE TABLE event_registrations(
     registrationID INT AUTO_INCREMENT PRIMARY KEY,
     firstName VARCHAR(100) NOT NULL,
     lastName VARCHAR(100) NOT NULL,

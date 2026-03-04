@@ -39,7 +39,7 @@ if(!empty($errors)){
     exit;
 }
 
-$sql = "INSERT INTO events(firstName, lastName, phone) VALUES (:firstName, :lastName, :phone)";
+$sql = "INSERT INTO event_registrations(firstName, lastName, phone) VALUES (:firstName, :lastName, :phone)";
 
 $stmt = $pdo->prepare($sql);
 
